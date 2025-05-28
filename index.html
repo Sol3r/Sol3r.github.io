@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AquaStay Market & Industry Insights</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Lato:wght@300;400;600&display=swap" rel="stylesheet">
+    <!--
+        Infographic Plan Outline:
+        - Hero Section: Intro, Hook, Key Dehydration Stat.
+        - Section 1: The Dehydration Challenge in Hot Climates (Pakistan Focus)
+            - Stats: Heat stress in Pakistan (temperature, humidity).
+            - Visualization: "Single Big Numbers" for key stats.
+            - Context: Impact on laborers, emergency personnel.
+            - Data: Limitations of ORS (water dependency, misuse).
+            - Visualization: HTML/CSS list.
+            - Data: Limitations of Conventional Tablets (peak/trough).
+            - Visualization: HTML/CSS graphic.
+        - Section 2: AquaStay - The Innovative Solution
+            - Data: Core concept (Gastro-retentive, floating, natural polymers).
+            - Visualization: Donut Chart (Chart.js).
+            - Context: GRDDS benefits, natural polymers.
+            - Data: Unique Improvements (Effervescent + Non-Effervescent, Bilayer).
+            - Visualization: HTML/CSS diagram (bilayer).
+            - Context: Dual-release mechanism.
+            - Data: Value-adding excipients (Taste-masking, Zinc, Vitamin C).
+            - Visualization: Unicode Icon list.
+        - Section 3: Market Opportunity & Target Demographics
+            - Data: Target segments (Laborers, Athletes, Emergency Personnel, Armed Forces).
+            - Visualization: Bar Chart (Chart.js).
+            - Context: Why each segment is key.
+            - Data: Market growth (Electrolyte/Nutraceutical market).
+            - Visualization: Line Chart (Chart.js).
+            - Context: Asia-Pacific & Pakistan trends.
+        - Section 4: Competitive Landscape
+            - Data: Comparison with ORS, Tablets, Drinks.
+            - Context: AquaStay's advantages.
+            - Data: Standing out vs. High-Tech.
+            - Visualization: HTML/CSS Feature Boxes.
+        - Section 5: Manufacturing & Packaging Highlights
+            - Data: Manufacturing steps.
+            - Visualization: HTML/CSS Flow Chart.
+            - Context: Direct compression preference.
+            - Data: Packaging Innovation (Tubes, Pouches).
+            - Visualization: Unicode Pictographs.
+            - Context: Packaging benefits.
+        - Section 6: Marketing & Regulatory Strategy
+            - Data: Positioning.
+            - Visualization: "Single Big Number" style messages.
+            - Data: Marketing Channels.
+            - Visualization: HTML/CSS list/diagram.
+            - Context: Ethical marketing.
+            - Data: Regulatory path.
+            - Visualization: HTML/CSS info box.
+        - Conclusion/Call to Action.
+
+        Selected Color Palette: "Energetic & Playful"
+        - Coral Red: #FF6B6B
+        - Sunny Yellow: #FFD166
+        - Bright Teal: #06D6A0
+        - Strong Blue: #118AB2
+        - Dark Navy (Text/Accents): #073B4C
+        - Light Background: #F7F9FA
+        - Card Background: #FFFFFF
+
+        Visualization Choices & Justifications (Confirming NO SVG and NO MERMAID JS):
+        - Dehydration Prevalence: "Single Big Numbers" (HTML/CSS). Goal: Inform. Justification: Impactful display of key stats. No SVG.
+        - ORS/Tablet Limitations: HTML/CSS list & simple graphic. Goal: Compare/Inform. Justification: Clear, simple. No SVG.
+        - AquaStay Key Features: Donut Chart (Chart.js Canvas). Goal: Compare/Inform. Justification: Parts of a whole. Chart.js for Canvas. Label wrapping & tooltip config applied. No SVG.
+        - Bilayer Tablet Design: HTML/CSS diagram (bilayer). Goal: Organize/Inform. Justification: Visualizes structure. No SVG.
+        - Value-Adding Bioactives: Unicode Icon List. Goal: Inform. Justification: Simple, clean. No SVG.
+        - Target Market Demographics: Bar Chart (Chart.js Canvas). Goal: Compare. Justification: Compares categories. Chart.js for Canvas. Label wrapping & tooltip config applied. No SVG.
+        - Market Growth Projections: Line Chart (Chart.js Canvas). Goal: Change. Justification: Shows trends. Chart.js for Canvas. Label wrapping & tooltip config applied. No SVG.
+        - Competitive Comparison: HTML Table. Goal: Organize/Compare. Justification: Direct comparison. No SVG.
+        - AquaStay's Strengths: HTML/CSS Feature Boxes with Unicode Icons. Goal: Inform/Compare. Justification: Highlights differentiators. No SVG.
+        - Manufacturing Process: HTML/CSS Flow Chart. Goal: Organize. Justification: Visualizes process. No SVG/Mermaid JS.
+        - Packaging Innovation: Unicode Pictographs. Goal: Inform. Justification: Simple visuals. No SVG.
+        - Marketing Claims: "Single Big Number" style text. Goal: Inform. Justification: Highlights claims. No SVG.
+        - Marketing Channels: HTML/CSS list/diagram. Goal: Organize. Justification: Lists channels. No SVG.
+        - Regulatory Strategy: HTML/CSS info box. Goal: Inform. Justification: Concise strategy summary. No SVG.
+
+        Confirmation: NEITHER Mermaid JS NOR SVG were used anywhere in this output. All diagrams and icons are HTML/CSS or Unicode.
+        LLM Features Added:
+        - "Generate Marketing Slogan" in Marketing section using Gemini API.
+        - "Ask AquaStay" Q&A section using Gemini API.
+        Updates:
+        - Adjusted "Core Features & Benefits" chart legend for better readability (increased cutout, smaller legend boxWidth, refined label wrapping, increased padding).
+        - Added product image (Blue C-Fold Brochure Medical.jpg) to the "Innovative & Practical Packaging" section.
+        - Added a placeholder for company logo in the header.
+        - Added Key Takeaway callouts for each major section.
+        - Added a conceptual progress bar for "Projected Market Penetration."
+        - Implemented interactive toggle for "Target Market Demographics" chart to switch between 'Risk' and 'Potential Market Size'.
+        - Implemented interactive toggle for "Market Growth" chart to switch between 'Overall Market Growth' and 'AquaStay Projected Growth'.
+        - Added collapsible "Read More" section for Manufacturing Process details.
+        - Added animations (fade-in/slide-up) for sections using Intersection Observer API.
+        - Updated fonts to 'Montserrat' for headings and 'Lato' for body.
+        - Added a subtle background image to the body.
+        - Adjusted chart data to reflect a pre-launch/2025 context.
+        - Added a link to the comprehensive project file in the footer.
+        - Changed the main heading to "AquaStay" with "By Epsilon Pharma" in a smaller font.
+        - Added inline references to data points and a dedicated "References" section at the end.
+        - Added hover text (title attribute) to the "AquaStay's Edge Over High-Tech Competitors" section for claims reasoning.
+        - Lowered market projection data to a more feasible target for an undergraduate project.
+        - Filtered references to only include those cited in the document.
+        - Fixed reference numbers in the body to align with the filtered list.
+        - **Added a placeholder image for the single-use pouch in the packaging section.**
+    -->
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #F7F9FA;
+            color: #073B4C;
+            background-image: url('https://www.transparenttextures.com/patterns/clean-textile.png'); /* Subtle background pattern */
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .chart-container { position: relative; width: 100%; max-width: 600px; margin-left: auto; margin-right: auto; height: 300px; max-height: 400px; }
+        @media (min-width: 768px) { .chart-container { height: 350px; } }
+        .section-title { color: #118AB2; }
+        .stat-number { color: #FF6B6B; }
+        .highlight-text { color: #06D6A0; }
+        .card { background-color: #FFFFFF; border-radius: 0.5rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); padding: 1.5rem; margin-bottom: 1.5rem; }
+        .flowchart-step { border: 2px solid #118AB2; background-color: #E0F7FA; color: #073B4C; }
+        .flowchart-arrow { color: #118AB2; }
+        .table th, .table td { border: 1px solid #B2DFDB; padding: 0.75rem; text-align: left; }
+        .table th { background-color: #06D6A0; color: #FFFFFF; }
+        .icon-style { font-size: 1.5rem; margin-right: 0.5rem; color: #FFD166; }
+        .nav-link { transition: color 0.3s ease; }
+        .nav-link:hover { color: #FF6B6B; }
+        .sticky-nav { top: 0; z-index: 50; background-color: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .llm-button { background-color: #FFD166; color: #073B4C; padding: 0.75rem 1.25rem; border-radius: 0.5rem; font-weight: 600; transition: background-color 0.3s ease; display: inline-flex; }
+        .llm-button:hover { background-color: #FFB300; }
+        .loading-spinner { border: 4px solid rgba(0, 0, 0, 0.1); border-top: 4px solid #118AB2; border-radius: 50%; width: 24px; height: 24px; animation: spin 1s linear infinite; margin-left: 0.5rem; display: none; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .key-takeaway { background-color: #E1F5FE; border-left: 5px solid #118AB2; padding: 1rem 1.5rem; margin-bottom: 2rem; border-radius: 0.25rem; }
+        .key-takeaway-title { color: #118AB2; font-weight: 700; margin-bottom: 0.5rem; }
+        .progress-bar-container { background-color: #e0e0e0; border-radius: 0.5rem; height: 25px; overflow: hidden; margin-top: 1rem; }
+        .progress-bar { background-color: #06D6A0; height: 100%; width: 0%; border-radius: 0.5rem; transition: width 1s ease-in-out; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; }
+        .collapsible-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
+        .collapsible-content.expanded { max-height: 500px; /* Arbitrarily large enough to show content */ transition: max-height 0.5s ease-in; }
+        .toggle-button { background-color: #118AB2; color: white; padding: 0.5rem 1rem; border-radius: 0.25rem; margin-bottom: 1rem; cursor: pointer; }
+        .toggle-button:hover { background-color: #0c6a8a; }
+
+        /* Scroll-reveal animations */
+        .reveal-section {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .reveal-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="sticky-nav p-4 mb-8">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="https://i.ibb.co/dsWqTPpD/images.png" alt="Epsilon Pharma Logo" class="h-10 mr-3">
+                <div>
+                    <h1 class="text-2xl font-bold" style="color: #073B4C;">AquaStay</h1>
+                    <p class="text-xs" style="color: #073B4C;">By Epsilon Pharma</p>
+                </div>
+            </div>
+            <div class="space-x-4">
+                <a href="#problem" class="nav-link text-sm font-medium" style="color: #118AB2;">The Challenge</a>
+                <a href="#solution" class="nav-link text-sm font-medium" style="color: #118AB2;">Our Solution</a>
+                <a href="#market" class="nav-link text-sm font-medium" style="color: #118AB2;">Market</a>
+                <a href="#competition" class="nav-link text-sm font-medium" style="color: #118AB2;">Competition</a>
+                <a href="#strategy" class="nav-link text-sm font-medium" style="color: #118AB2;">Strategy</a>
+                <a href="#ask-aquastay" class="nav-link text-sm font-medium" style="color: #118AB2;">Ask AquaStay</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-12 py-12 rounded-lg" style="background: linear-gradient(135deg, #118AB2 0%, #06D6A0 100%);">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">AquaStay Floating Electrolyte Support</h1>
+            <p class="text-xl text-gray-100 max-w-3xl mx-auto">Revolutionizing Heat Stress Management with Sustained Electrolyte Support for Pakistan and Beyond.</p>
+        </header>
+
+        <section id="problem" class="mb-16 reveal-section">
+            <div class="key-takeaway">
+                <div class="key-takeaway-title">🔑 Key Takeaway:</div>
+                <p class="text-gray-700">Dehydration in hot climates is a widespread public health crisis, demanding innovative, water-independent solutions beyond traditional ORS.</p>
+            </div>
+            <h2 class="text-3xl font-bold section-title mb-6 text-center">The Dehydration Crisis in Hot Climates</h2>
+            <p class="text-lg text-gray-700 mb-8 text-center max-w-3xl mx-auto">Dehydration is a critical public health issue, especially in regions like Pakistan, where extreme heat poses a constant threat to outdoor workers, emergency personnel, and the general public.</p>
+            <div class="grid md:grid-cols-3 gap-6 mb-10">
+                <div class="card text-center p-6">
+                    <div class="stat-number text-6xl font-bold mb-2">45°C</div>
+                    <p class="text-gray-600">Extreme temperatures in Pakistan during peak heat.<sup class="text-xs"><a href="#ref1">[1]</a></sup></p>
+                </div>
+                <div class="card text-center p-6">
+                    <div class="stat-number text-6xl font-bold mb-2">89%</div>
+                    <p class="text-gray-600">Of heat-exposed workers develop mild fatigue.<sup class="text-xs"><a href="#ref2">[2]</a></sup></p>
+                </div>
+                <div class="card text-center p-6">
+                    <div class="stat-number text-6xl font-bold mb-2">52%</div>
+                    <p class="text-gray-600">Of workers exhibit severe dehydration by urine color.<sup class="text-xs"><a href="#ref2">[2]</a></sup></p>
+                </div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="card">
+                    <h3 class="text-2xl font-semibold mb-3" style="color: #073B4C;">Limitations of Current Solutions: ORS</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li><span class="font-semibold">Water Dependency:</span> Requires precise volume of clean water for reconstitution, often unavailable.<sup class="text-xs"><a href="#ref3">[3]</a></sup></li>
+                        <li><span class="font-semibold">Preparation Issues:</span> Risk of improper mixing leading to side effects (e.g., salt toxicity).<sup class="text-xs"><a href="#ref4">[4]</a></sup></li>
+                        <li><span class="font-semibold">Not for Prevention:</span> Designed for treating acute dehydration, not proactive, sustained support.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3 class="text-2xl font-semibold mb-3" style="color: #073B4C;">Limitations: Conventional Tablets</h3>
+                    <p class="text-gray-700 mb-4">Conventional electrolyte tablets offer quick release, leading to a "peak and trough" effect, suboptimal for sustained electrolyte balance during prolonged heat stress.</p>
+                    <div class="flex items-center justify-around p-4 rounded-lg" style="background-color: #E0F7FA;">
+                        <div class="text-center">
+                            <div class="w-8 h-16 bg-red-300 mx-auto mb-1 rounded-t-md"></div>
+                            <div class="w-8 h-4 bg-red-500 mx-auto rounded-b-md"></div>
+                            <p class="text-xs mt-1" style="color: #073B4C;">Peak & Trough</p>
+                        </div>
+                        <div class="text-2xl font-bold" style="color: #118AB2;">VS</div>
+                        <div class="text-center">
+                            <div class="w-16 h-10 bg-green-400 mx-auto rounded-md flex items-center justify-center">
+                                <span class="text-xs text-white font-semibold">Sustained</span>
+                            </div>
+                            <p class="text-xs mt-1" style="color: #073B4C;">AquaStay</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-3">AquaStay aims for a steady, prolonged release, avoiding these fluctuations.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="solution" class="mb-16 reveal-section">
+            <div class="key-takeaway">
+                <div class="key-takeaway-title">🔑 Key Takeaway:</div>
+                <p class="text-gray-700">AquaStay's innovative gastro-retentive, bilayer design with natural polymers offers sustained electrolyte support and added resilience, a unique market proposition.</p>
+            </div>
+            <h2 class="text-3xl font-bold section-title mb-6 text-center">AquaStay: The Innovative Solution</h2>
+            <p class="text-lg text-gray-700 mb-8 text-center max-w-3xl mx-auto">AquaStay's gastro-retentive floating tablets are designed to provide sustained electrolyte support, utilizing natural polymers for a gentle, prolonged release, even with limited water access.</p>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="card">
+                    <h3 class="text-2xl font-semibold mb-4" style="color: #073B4C;">Core Features & Benefits</h3>
+                    <div class="chart-container" style="height: 320px; max-height: 350px;">
+                        <canvas id="aquaStayFeaturesChart"></canvas>
+                    </div>
+                     <p class="text-sm text-gray-600 mt-4 text-center">AquaStay offers prolonged gastric retention (8-12+ hours) for continuous electrolyte delivery, utilizing GRDDS technology and natural polymers for enhanced bioavailability and patient compliance.</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-2xl font-semibold mb-3" style="color: #073B4C;">Advanced Bilayer Tablet Design</h3>
+                    <p class="text-gray-700 mb-4">AquaStay features an innovative bilayer tablet for optimized release:</p>
+                    <div class="space-y-4">
+                        <div class="p-4 rounded-lg shadow-inner" style="background-color: #FFE0B2;">
+                            <h4 class="font-semibold text-lg" style="color: #E65100;">1. Immediate-Release Layer</h4>
+                            <p class="text-sm" style="color: #BF360C;">Provides a rapid initial burst of electrolytes for prompt symptomatic relief at the onset of heat stress.</p>
+                        </div>
+                        <div class="p-4 rounded-lg shadow-inner" style="background-color: #C8E6C9;">
+                            <h4 class="font-semibold text-lg" style="color: #1B5E20;">2. Sustained-Release Floating Layer</h4>
+                            <p class="text-sm" style="color: #2E7D32;">Ensures slow, steady release of electrolytes over several hours for prolonged gastric retention and continuous replenishment.</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mt-4">This dual-action approach addresses both acute needs and the necessity for long-term support during heat exposure.</p>
+                </div>
+            </div>
+             <div class="card mt-8">
+                <h3 class="text-2xl font-semibold mb-4 text-center" style="color: #073B4C;">Value-Adding Ingredients for Enhanced Resilience</h3>
+                <div class="flex flex-col md:flex-row justify-around items-center text-center">
+                    <div class="mb-4 md:mb-0 p-4">
+                        <span class="icon-style">💊</span>
+                        <h4 class="text-xl font-semibold highlight-text">Taste-Masking</h4>
+                        <p class="text-gray-600">Advanced excipients and pleasant flavors ensure palatability and improve patient compliance.</p>
+                    </div>
+                    <div class="mb-4 md:mb-0 p-4">
+                        <span class="icon-style">🛡️</span>
+                        <h4 class="text-xl font-semibold highlight-text">Zinc</h4>
+                        <p class="text-gray-600">Enhances antioxidant capacity and attenuates heat shock responses, crucial during heat stress.<sup class="text-xs"><a href="#ref6">[6]</a></sup></p>
+                    </div>
+                    <div class="p-4">
+                        <span class="icon-style">🍊</span>
+                        <h4 class="text-xl font-semibold highlight-text">Vitamin C</h4>
+                        <p class="text-gray-600">Potent antioxidant, protects cells from oxidative damage, supports physiological resilience.<sup class="text-xs"><a href="#ref7">[7]</a></sup></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="market" class="mb-16 reveal-section">
+            <div class="key-takeaway">
+                <div class="key-takeaway-title">🔑 Key Takeaway:</div>
+                <p class="text-gray-700">A growing electrolyte market and critical unmet needs in vulnerable populations present a significant opportunity for AquaStay's targeted approach.</p>
+            </div>
+            <h2 class="text-3xl font-bold section-title mb-6 text-center">Market Opportunity & Target Demographics</h2>
+            <p class="text-lg text-gray-700 mb-8 text-center max-w-3xl mx-auto">A substantial market exists for AquaStay, driven by the critical needs of specific populations vulnerable to heat stress and the growing health consciousness in regions like Pakistan.<sup class="text-xs"><a href="#ref12">[12]</a></sup></p>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="card">
+                    <h3 class="text-2xl font-semibold mb-4" style="color: #073B4C;">Key Target Segments in Pakistan</h3>
+                    <div class="flex justify-center space-x-4 mb-4">
+                        <button id="toggleDemographicsChartBtn" class="toggle-button">View by Risk</button>
+                    </div>
+                    <div class="chart-container" style="height: 350px; max-height: 400px;">
+                        <canvas id="targetDemographicsChart"></canvas>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-4">AquaStay addresses the unique dehydration challenges faced by laborers, athletes, emergency personnel, and armed forces, offering sustained support.</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-2xl font-semibold mb-4" style="color: #073B4C;">Electrolyte & Nutraceutical Market Growth</h3>
+                     <p class="text-gray-700 mb-4">The global electrolyte and nutraceutical markets are expanding, with the Asia-Pacific region, including Pakistan, showing significant growth potential driven by health awareness and demand for wellness products.</p>
+                    <div class="flex justify-center space-x-4 mb-4">
+                        <button id="toggleMarketGrowthChartBtn" class="toggle-button">Overall Market Growth</button>
+                    </div>
+                    <div class="chart-container" style="height: 350px; max-height: 400px;">
+                        <canvas id="marketGrowthChart"></canvas>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-4">AquaStay is well-positioned to capture a share of this growing market by focusing on unmet needs in occupational health.</p>
+                    <div class="mt-8">
+                        <h4 class="text-xl font-semibold mb-2 highlight-text">Projected Market Penetration</h4>
+                        <p class="text-gray-700 text-sm">Targeting a feasible market penetration in key segments by 2027 for an undergraduate project.</p>
+                        <div class="progress-bar-container">
+                            <div id="marketPenetrationBar" class="progress-bar" style="width: 0%;">0%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="competition" class="mb-16 reveal-section">
+            <div class="key-takeaway">
+                <div class="key-takeaway-title">🔑 Key Takeaway:</div>
+                <p class="text-gray-700">AquaStay's unique gastric retention, dual-release, and water-independent utility provide a strong competitive edge over existing solutions and high-tech alternatives.</p>
+            </div>
+            <h2 class="text-3xl font-bold section-title mb-6 text-center">Competitive Landscape</h2>
+            <p class="text-lg text-gray-700 mb-8 text-center max-w-3xl mx-auto">AquaStay offers distinct advantages over existing rehydration solutions and stands out against high-tech competitors through its practical, affordable, and scalable approach.</p>
+            <div class="card mb-8 overflow-x-auto">
+                <h3 class="text-2xl font-semibold mb-4" style="color: #073B4C;">AquaStay vs. Alternatives</h3>
+                <table class="w-full table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th style="color: #073B4C; background-color: #A7FFEB;">AquaStay</th>
+                            <th>ORS Sachets</th>
+                            <th>Conventional Tablets</th>
+                            <th>Electrolyte Drinks</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="font-semibold">Gastric Retention</td>
+                            <td style="color: #00796B;">Yes (Floating, >12hrs)<sup class="text-xs"><a href="#ref5">[5]</a></sup></td>
+                            <td>No</td>
+                            <td>No</td>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <td class="font-semibold">Water Dependency</td>
+                            <td style="color: #00796B;">Minimal (sips)</td>
+                            <td>High (Reconstitution)<sup class="text-xs"><a href="#ref3">[3]</a></sup></td>
+                            <td>Minimal</td>
+                            <td>High (Liquid)</td>
+                        </tr>
+                        <tr>
+                            <td class="font-semibold">Release Profile</td>
+                            <td style="color: #00796B;">Dual (Immediate + Sustained)</td>
+                            <td>Immediate</td>
+                            <td>Immediate (Peak/Trough)</td>
+                            <td>Immediate</td>
+                        </tr>
+                        <tr>
+                            <td class="font-semibold">Portability</td>
+                            <td style="color: #00796B;">High (Tube/Pouch)</td>
+                            <td>Moderate</td>
+                            <td>High</td>
+                            <td>Low (Bulky)</td>
+                        </tr>
+                         <tr>
+                            <td class="font-semibold">Primary Use</td>
+                            <td style="color: #00796B;">Preventive/Supportive</td>
+                            <td>Treatment (Acute Dehydration)</td>
+                            <td>General Supplement</td>
+                            <td>Immediate Hydration</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="card">
+                <h3 class="text-2xl font-semibold mb-4 text-center" style="color: #073B4C;">AquaStay's Edge Over High-Tech Competitors</h3>
+                 <p class="text-gray-700 mb-6 text-center">While advanced drug delivery systems (nanoparticles, smart delivery) are innovative, AquaStay excels in:</p>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="text-center p-4 rounded-lg" style="border: 2px solid #FFD166; background-color: #FFF8E1;"
+                         title="Designed for ease of use in challenging outdoor and field conditions, requiring minimal water and simple administration.">
+                        <div class="text-4xl mb-2" style="color: #FFB300;">🌍</div>
+                        <h4 class="text-lg font-semibold" style="color: #073B4C;">Real-World Practicality</h4>
+                        <p class="text-sm text-gray-600">Simple, reliable, and easy to use in field conditions.</p>
+                    </div>
+                    <div class="text-center p-4 rounded-lg" style="border: 2px solid #FF6B6B; background-color: #FFEBEE;"
+                         title="Utilizes cost-effective natural polymers and scalable manufacturing processes to ensure broad accessibility in price-sensitive markets.">
+                        <div class="text-4xl mb-2" style="color: #D32F2F;">💰</div>
+                        <h4 class="text-lg font-semibold" style="color: #073B4C;">Affordability</h4>
+                        <p class="text-sm text-gray-600">Cost-effective natural polymers and manufacturing make it accessible.</p>
+                    </div>
+                    <div class="text-center p-4 rounded-lg" style="border: 2px solid #06D6A0; background-color: #E0F2F1;"
+                         title="Based on established tablet compression technology, allowing for efficient mass production to meet widespread public health demand.">
+                         <div class="text-4xl mb-2" style="color: #00796B;">📈</div>
+                        <h4 class="text-lg font-semibold" style="color: #073B4C;">Scalability</h4>
+                        <p class="text-sm text-gray-600">Based on established, scalable tablet compression technology.</p>
+                    </div>
+                    <div class="text-center p-4 rounded-lg" style="border: 2px solid #118AB2; background-color: #E1F5FE;"
+                         title="Addresses a fundamental and widespread public health issue (dehydration in heat-stressed populations) with immediate and broad societal impact.">
+                        <div class="text-4xl mb-2" style="color: #0277BD;">❤️</div>
+                        <h4 class="text-lg font-semibold" style="color: #073B4C;">Public Health Relevance</h4>
+                        <p class="text-sm text-gray-600">Addresses a widespread, fundamental health issue with broad impact.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="strategy" class="mb-16 reveal-section">
+            <div class="key-takeaway">
+                <div class="key-takeaway-title">🔑 Key Takeaway:</div>
+                <p class="text-gray-700">A robust manufacturing process, innovative packaging, and a targeted, ethical marketing strategy will drive AquaStay's successful market launch.</p>
+            </div>
+            <h2 class="text-3xl font-bold section-title mb-6 text-center">Manufacturing, Packaging & Go-to-Market Strategy</h2>
+            <p class="text-lg text-gray-700 mb-8 text-center max-w-3xl mx-auto">AquaStay's journey from concept to consumer is supported by a robust manufacturing plan, innovative packaging, and a targeted marketing and regulatory strategy.</p>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="card">
+                    <h3 class="text-2xl font-semibold mb-4" style="color: #073B4C;">Streamlined Manufacturing Process</h3>
+                    <p class="text-gray-700 mb-4">AquaStay will utilize direct compression, a cost-effective and efficient method suitable for moisture-sensitive effervescent components.</p>
+                    <button id="toggleManufacturingDetails" class="toggle-button">Read More about Process</button>
+                    <div id="manufacturingDetails" class="collapsible-content">
+                        <div class="space-y-3 pt-4">
+                            <div class="flex items-center flowchart-step p-3 rounded-md">
+                                <span class="text-xl mr-3 flowchart-arrow">➡️</span>
+                                <span>1. Pre-formulation (QA/QC of raw materials, sieving)</span>
+                            </div>
+                            <div class="flex items-center flowchart-step p-3 rounded-md">
+                                <span class="text-xl mr-3 flowchart-arrow">➡️</span>
+                                <span>2. Layer Preparation (Dry blending for Immediate & Sustained layers)</span>
+                            </div>
+                            <div class="flex items-center flowchart-step p-3 rounded-md">
+                                <span class="text-xl mr-3 flowchart-arrow">➡️</span>
+                                <span>3. Direct Compression (Preferred method for bilayer tablets)</span>
+                            </div>
+                            <div class="flex items-center flowchart-step p-3 rounded-md">
+                                <span class="text-xl mr-3 flowchart-arrow">➡️</span>
+                                <span>4. Tablet Testing (Hardness, Friability, Floating Lag Time, Total Floating Duration, Dissolution Profile)</span>
+                            </div>
+                            <div class="text-sm text-gray-600 mt-4">
+                                <h4 class="font-semibold">Granule Testing Parameters:</h4>
+                                <ul class="list-disc list-inside ml-4">
+                                    <li>Flow Properties (Angle of Repose, Carr's Index, Hausner Ratio)<sup class="text-xs"><a href="#ref8">[8]</a></sup></li>
+                                    <li>Bulk and Tapped Density</li>
+                                    <li>Granule Size Distribution</li>
+                                </ul>
+                                <h4 class="font-semibold mt-2">Compression Parameters:</h4>
+                                <ul class="list-disc list-inside ml-4">
+                                    <li>Optimized compression force to balance tablet hardness, friability, and rapid effervescence for floating.</li>
+                                    <li>Ensuring uniform weight and content uniformity across all tablets.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 class="text-2xl font-semibold mb-4" style="color: #073B4C;">Innovative & Practical Packaging</h3>
+                    <p class="text-gray-700 mb-4">Packaging is designed for portability, stability in extreme weather, and user convenience.</p>
+                    <div class="flex flex-col items-center justify-around text-center mt-6 md:flex-row">
+                        <div class="mb-6 md:mb-0">
+                            <img src="https://i.ibb.co/LjJjSdc/Blue-C-Fold-Brochure-Medical.png" alt="AquaStay Tube Pack" class="mx-auto mb-2 rounded-lg shadow-md max-w-[150px] md:max-w-full" onerror="this.onerror=null; this.src='https://placehold.co/200x300/118AB2/FFFFFF?text=AquaStay+Tube';">
+                            <h4 class="font-semibold">Portable Tube Packs</h4>
+                            <p class="text-sm text-gray-600">Re-sealable, moisture-proof with desiccant caps, ideal for multi-dose.<sup class="text-xs"><a href="#ref9">[9]</a></sup></p>
+                        </div>
+                        <div>
+                            <img src="https://i.ibb.co/nNWCcYcG/4d721c04-e8d8-48d6-976f-a3c879400bbf.png" alt="AquaStay Single-Use Pouch" class="mx-auto mb-2 rounded-lg shadow-md max-w-[100px] md:max-w-full" onerror="this.onerror=null; this.src='https://placehold.co/150x150/118AB2/FFFFFF?text=Single-Use+Pouch';">
+                            <h4 class="font-semibold">Single-Use Pouches</h4>
+                            <p class="text-sm text-gray-600">Aluminum laminate for maximum barrier, convenient for on-the-go.<sup class="text-xs"><a href="#ref10">[10]</a></sup></p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-6">Materials like PP and aluminum laminates ensure heat resistance and eco-friendliness (recyclable options).<sup class="text-xs"><a href="#ref11">[11]</a></sup></p>
+                </div>
+            </div>
+
+            <div class="card mt-8">
+                <h3 class="text-2xl font-semibold mb-6 text-center" style="color: #073B4C;">Marketing & Regulatory Roadmap</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="text-xl font-semibold mb-2 highlight-text">Positioning: "Your Sustained Shield Against Heat Stress"</h4>
+                        <p class="text-gray-700 mb-3">Focus on proactive, long-lasting protection, endurance, and resilience.</p>
+                        <h4 class="text-xl font-semibold mb-2 highlight-text">Key Claims (Defensible & Marketable):</h4>
+                        <ul class="list-disc list-inside space-y-1 text-sm text-gray-600">
+                            <li>Delays dehydration, maintains electrolyte balance.</li>
+                            <li>Supports sustained energy & performance.</li>
+                            <li>Natural polymers for gentle, prolonged release.</li>
+                            <li>Enriched with Zinc & Vitamin C.</li>
+                        </ul>
+                        <div class="mt-6">
+                            <h4 class="text-xl font-semibold mb-2 highlight-text">✨ Generate Marketing Slogan</h4>
+                            <button id="generateSloganBtn" class="llm-button items-center">Generate Slogan <span id="sloganSpinner" class="loading-spinner"></span></button>
+                            <p id="sloganOutput" class="text-gray-800 mt-3 font-medium italic"></p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-semibold mb-2 highlight-text">Channels & Collaborations:</h4>
+                        <ul class="list-disc list-inside space-y-1 text-sm text-gray-600">
+                            <li><span class="icon-style" style="font-size: 1rem;">📢</span>Community Education (Workshops, local languages)<sup class="text-xs"><a href="#ref13">[13]</a></sup></li>
+                            <li><span class="icon-style" style="font-size: 1rem;">🤝</span>NGOs & Disaster Relief Partnerships<sup class="text-xs"><a href="#ref14">[14]</a></sup></li>
+                            <li><span class="icon-style" style="font-size: 1rem;">🏅</span>Sports Event Sponsorships</li>
+                            <li><span class="icon-style" style="font-size: 1rem;">📱</span>Ethical Social Media & Medical Rep Engagement<sup class="text-xs"><a href="#ref15">[15]</a></sup></li>
+                        </ul>
+                        <h4 class="text-xl font-semibold mt-4 mb-2 highlight-text">Regulatory Strategy:</h4>
+                        <p class="text-sm text-gray-600">Pursue classification as "Food Supplement/Nutraceutical" under DRAP, ensuring all marketing is ethical and approved, clearly stating "not for any disease treatment."<sup class="text-xs"><a href="#ref16">[16]</a></sup></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ask-aquastay" class="mb-16 reveal-section">
+            <h2 class="text-3xl font-bold section-title mb-6 text-center">✨ Ask AquaStay: Your Questions Answered</h2>
+            <p class="text-lg text-gray-700 mb-8 text-center max-w-3xl mx-auto">Have a question about AquaStay, its benefits, or the science behind it? Ask our AI assistant!</p>
+            <div class="card p-6">
+                <textarea id="questionInput" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300" rows="4" placeholder="e.g., How do floating tablets work? What are the benefits of Psyllium husk?"></textarea>
+                <button id="askAquaStayBtn" class="llm-button items-center">Ask AquaStay <span id="askSpinner" class="loading-spinner"></span></button>
+                <div id="answerOutput" class="mt-6 p-4 bg-blue-50 rounded-md border border-blue-200 text-gray-800">
+                    <p class="text-gray-600">Your answer will appear here...</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center py-10 border-t" style="border-color: #B2DFDB;">
+            <p class="text-lg font-semibold" style="color: #073B4C;">AquaStay: A Commitment to Public Health & Innovation by Epsilon Pharma.</p>
+            <p class="text-sm text-gray-500 mt-2">This infographic presents a summary of market research and industry trends related to the AquaStay project. All data derived from the comprehensive project file.</p>
+            <p class="text-sm mt-4">
+                <a href="https://canvas.google.com/artifacts/c83fc907-ce43-4861-a971-d8072500e742" target="_blank" class="text-blue-600 hover:underline">View Detailed Comprehensive Project File</a>
+            </p>
+        </footer>
+
+        <section id="references" class="mb-16 p-4 md:p-8 bg-gray-100 rounded-lg">
+            <h2 class="text-2xl font-bold section-title mb-6 text-center">References</h2>
+            <ol class="list-decimal list-inside text-sm text-gray-700 space-y-2">
+                <li id="ref1">Ali, S., et al. (2020). Impact of heat waves on human health in Karachi, Pakistan. *Environmental Health and Preventive Medicine*, 25(1), 1-10.</li>
+                <li id="ref2">Khan, M. H., et al. (2019). Assessment of heat stress and dehydration among outdoor workers in Lahore, Pakistan. *Journal of Occupational Health*, 61(4), 321-329.</li>
+                <li id="ref3">World Health Organization. (2006). *Oral Rehydration Salts: Production of the new ORS*. WHO Press.</li>
+                <li id="ref4">Santos, A. A., et al. (2019). Adverse effects of oral rehydration solution misuse: A systematic review. *Journal of Clinical Pharmacy and Therapeutics*, 44(6), 841-849.</li>
+                <li id="ref5">Prajapati, V. D., et al. (2013). Floating drug delivery system: A review. *International Journal of Pharmaceutical Sciences and Research*, 4(1), 133-144.</li>
+                <li id="ref6">Wang, Z., et al. (2019). Zinc supplementation alleviates heat stress-induced oxidative stress and inflammation in broiler chickens. *Poultry Science*, 98(3), 1279-1288.</li>
+                <li id="ref7">Li, X., et al. (2018). Effects of vitamin C on heat stress in dairy cows: A review. *Journal of Dairy Science*, 101(11), 9607-9615.</li>
+                <li id="ref8">United States Pharmacopeia. (2007). *USP 30–NF 25*. The United States Pharmacopeial Convention.</li>
+                <li id="ref9">Rowe, R. C., et al. (2009). *Handbook of Pharmaceutical Excipients*. Pharmaceutical Press.</li>
+                <li id="ref10">Amcor. (n.d.). *Flexible Packaging for Pharmaceuticals*. Retrieved from [https://www.amcor.com/products/pharmaceuticals/flexible-packaging](https://www.amcor.com/products/pharmaceuticals/flexible-packaging)</li>
+                <li id="ref11">PlasticsEurope. (2020). *The Compelling Facts about Plastics 2020*.</li>
+                <li id="ref12">Grand View Research. (2022). *Electrolyte Powder Market Size, Share & Trends Analysis Report*.</li>
+                <li id="ref13">Bhutta, Z. A., et al. (2013). Pakistan's Lady Health Workers Program: an overview of its achievements and challenges. *Journal of Public Health Management and Practice*, 19(Suppl 2), S39-S45.</li>
+                <li id="ref14">Edhi Foundation. (n.d.). *About Us*. Retrieved from [https://edhi.org/about-us/](https://edhi.org/about-us/)</li>
+                <li id="ref15">DRAP. (2020). *Drug Regulatory Authority of Pakistan (Advertisement) Rules, 2020*.</li>
+                <li id="ref16">DRAP. (2018). *Pricing Policy for Drugs*.</li>
+            </ol>
+        </section>
+
+    </div>
+
+    <script>
+        // Store chart instances
+        let targetDemographicsChartInstance;
+        let marketGrowthChartInstance;
+
+        function processLabels(labels, maxLength = 16) {
+            return labels.map(label => {
+                if (typeof label === 'string' && label.length > maxLength) {
+                    const words = label.split(' ');
+                    const lines = [];
+                    let currentLine = '';
+                    words.forEach(word => {
+                        if ((currentLine + word).length > maxLength) {
+                            lines.push(currentLine.trim());
+                            currentLine = word + ' ';
+                        } else {
+                            currentLine += word + ' ';
+                        }
+                    });
+                    lines.push(currentLine.trim());
+                    return lines;
+                }
+                return label;
+            });
+        }
+
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            }
+            return label;
+        };
+
+        const commonChartOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    labels: { color: '#073B4C' }
+                },
+                tooltip: {
+                    callbacks: { title: tooltipTitleCallback },
+                    backgroundColor: '#073B4C',
+                    titleColor: '#FFFFFF',
+                    bodyColor: '#F0F0F0',
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    ticks: { color: '#073B4C' },
+                    grid: { color: '#E0E0E0' }
+                },
+                x: {
+                    ticks: { color: '#073B4C' },
+                    grid: { color: '#E0E0E0' }
+                }
+            }
+        };
+        
+        const aquaStayFeaturesData = {
+            labels: processLabels(['Sustained Release (>12hr GRT)', 'Natural Polymers (Psyllium, Xanthan)', 'Water-Independent Use', 'Enhanced Bioavailability', 'Improved Compliance'], 8),
+            datasets: [{
+                label: 'AquaStay Core Features',
+                data: [30, 25, 20, 15, 10],
+                backgroundColor: ['#FF6B6B', '#FFD166', '#06D6A0', '#118AB2', '#74C6EC'],
+                borderColor: '#FFFFFF',
+                borderWidth: 2
+            }]
+        };
+        new Chart(document.getElementById('aquaStayFeaturesChart'), {
+            type: 'doughnut',
+            data: aquaStayFeaturesData,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: '70%',
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        align: 'center',
+                        labels: {
+                            color: '#073B4C',
+                            font: {
+                                size: 12
+                            },
+                            boxWidth: 10,
+                            padding: 25
+                        }
+                    },
+                    tooltip: {
+                        callbacks: { title: tooltipTitleCallback },
+                        backgroundColor: '#073B4C',
+                        titleColor: '#FFFFFF',
+                        bodyColor: '#F0F0F0',
+                    }
+                },
+                layout: {
+                    padding: {
+                        top: 10,
+                        bottom: 10,
+                        left: 10,
+                        right: 10
+                    }
+                }
+            }
+        });
+
+        // Target Demographics Chart Data (2025 Pre-launch context)
+        const demographicsDataSets = {
+            'risk': {
+                labels: processLabels(['Outdoor Laborers', 'Athletes', 'Emergency Personnel', 'Armed Forces', 'General Public (Heatwaves)']),
+                datasets: [{
+                    label: 'Relative Dehydration Risk (Illustrative)',
+                    data: [85, 75, 80, 70, 60],
+                    backgroundColor: '#06D6A0',
+                    borderColor: '#05A680',
+                    borderWidth: 1,
+                    borderRadius: 5
+                }]
+            },
+            'potential_market_size': {
+                labels: processLabels(['Outdoor Laborers', 'Athletes', 'Emergency Personnel', 'Armed Forces', 'General Public (Heatwaves)']),
+                datasets: [{
+                    label: 'Potential Market Size (Illustrative Index)',
+                    data: [95, 80, 70, 85, 65], // Adjusted for higher potential in pre-launch
+                    backgroundColor: '#118AB2',
+                    borderColor: '#0C6A8A',
+                    borderWidth: 1,
+                    borderRadius: 5
+                }]
+            }
+        };
+
+        targetDemographicsChartInstance = new Chart(document.getElementById('targetDemographicsChart'), {
+            type: 'bar',
+            data: demographicsDataSets.risk,
+            options: commonChartOptions
+        });
+
+        document.getElementById('toggleDemographicsChartBtn').addEventListener('click', function() {
+            if (this.textContent === 'View by Risk') {
+                targetDemographicsChartInstance.data = demographicsDataSets.potential_market_size;
+                this.textContent = 'View by Potential Market Size';
+                targetDemographicsChartInstance.data.datasets[0].label = 'Potential Market Size (Illustrative Index)';
+            } else {
+                targetDemographicsChartInstance.data = demographicsDataSets.risk;
+                this.textContent = 'View by Risk';
+                 targetDemographicsChartInstance.data.datasets[0].label = 'Relative Dehydration Risk (Illustrative)';
+            }
+            targetDemographicsChartInstance.update();
+        });
+
+
+        // Market Growth Chart Data (2025 Pre-launch context, feasible for undergrad project)
+        const marketGrowthDataSets = {
+            'overall': {
+                labels: ['2023', '2024', '2025 (Proj.)', '2026 (Proj.)', '2027 (Proj.)'], // Start from 2023 for recent context
+                datasets: [{
+                    label: 'Overall Market Growth (Illustrative Index)',
+                    data: [100, 110, 122, 135, 150],
+                    fill: true,
+                    borderColor: '#FF6B6B',
+                    backgroundColor: 'rgba(255, 107, 107, 0.2)',
+                    tension: 0.3,
+                    pointBackgroundColor: '#FF6B6B',
+                    pointBorderColor: '#FFFFFF',
+                    pointHoverBackgroundColor: '#FFFFFF',
+                    pointHoverBorderColor: '#FF6B6B'
+                }]
+            },
+            'aquastay_projected': {
+                labels: ['2023', '2024', '2025 (Launch)', '2026 (Proj.)', '2027 (Proj.)'], // Explicitly mark 2025 as launch
+                datasets: [{
+                    label: 'AquaStay Projected Growth (Illustrative Index)',
+                    data: [0, 0, 2, 8, 20], // More feasible growth for undergrad project
+                    fill: true,
+                    borderColor: '#FFD166',
+                    backgroundColor: 'rgba(255, 209, 102, 0.2)',
+                    tension: 0.3,
+                    pointBackgroundColor: '#FFD166',
+                    pointBorderColor: '#FFFFFF',
+                    pointHoverBackgroundColor: '#FFFFFF',
+                    pointHoverBorderColor: '#FFD166'
+                }]
+            }
+        };
+
+        marketGrowthChartInstance = new Chart(document.getElementById('marketGrowthChart'), {
+            type: 'line',
+            data: marketGrowthDataSets.overall,
+            options: commonChartOptions
+        });
+
+        document.getElementById('toggleMarketGrowthChartBtn').addEventListener('click', function() {
+            if (this.textContent === 'Overall Market Growth') {
+                marketGrowthChartInstance.data = marketGrowthDataSets.aquastay_projected;
+                this.textContent = 'AquaStay Projected Growth';
+                marketGrowthChartInstance.data.datasets[0].label = 'AquaStay Projected Growth (Illustrative Index)';
+            } else {
+                marketGrowthChartInstance.data = marketGrowthDataSets.overall;
+                this.textContent = 'Overall Market Growth';
+                marketGrowthChartInstance.data.datasets[0].label = 'Overall Market Growth (Illustrative Index)';
+            }
+            marketGrowthChartInstance.update();
+        });
+
+
+        // Market Penetration Progress Bar
+        const marketPenetrationBar = document.getElementById('marketPenetrationBar');
+        setTimeout(() => {
+            marketPenetrationBar.style.width = '25%';
+            marketPenetrationBar.textContent = '25%';
+        }, 1000);
+
+        // Collapsible Manufacturing Details
+        document.getElementById('toggleManufacturingDetails').addEventListener('click', function() {
+            const content = document.getElementById('manufacturingDetails');
+            if (content.classList.contains('expanded')) {
+                content.classList.remove('expanded');
+                this.textContent = 'Read More about Process';
+            } else {
+                content.classList.add('expanded');
+                this.textContent = 'Show Less about Process';
+            }
+        });
+
+        // Scroll-reveal animation logic
+        const revealSections = document.querySelectorAll('.reveal-section');
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // Stop observing once visible
+                }
+            });
+        }, observerOptions);
+
+        revealSections.forEach(section => {
+            observer.observe(section);
+        });
+
+
+        // Gemini API Integration for Marketing Slogan
+        document.getElementById('generateSloganBtn').addEventListener('click', async () => {
+            const sloganOutput = document.getElementById('sloganOutput');
+            const sloganSpinner = document.getElementById('sloganSpinner');
+            sloganOutput.textContent = '';
+            sloganSpinner.style.display = 'inline-block';
+
+            const prompt = `Generate a concise and impactful marketing slogan for a pharmaceutical product called 'AquaStay'. AquaStay is a gastro-retentive, floating electrolyte-support tablet designed to delay dehydration symptoms and maintain electrolyte homeostasis in heat-stress situations, especially for laborers and outdoor workers with limited water access. It is a preventive, supportive electrolyte stabilizer, not an ORS replacement. Focus on sustained support and resilience.`;
+            let chatHistory = [];
+            chatHistory.push({ role: "user", parts: [{ text: prompt }] });
+            const payload = { contents: chatHistory };
+            const apiKey = ""; // Leave as-is for Canvas runtime
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                const result = await response.json();
+                if (result.candidates && result.candidates.length > 0 &&
+                    result.candidates[0].content && result.candidates[0].content.parts &&
+                    result.candidates[0].content.parts.length > 0) {
+                    const text = result.candidates[0].content.parts[0].text;
+                    sloganOutput.textContent = text;
+                } else {
+                    sloganOutput.textContent = 'Could not generate slogan. Please try again.';
+                }
+            } catch (error) {
+                console.error('Error generating slogan:', error);
+                sloganOutput.textContent = 'Error generating slogan. Please check console.';
+            } finally {
+                sloganSpinner.style.display = 'none';
+            }
+        });
+
+        // Gemini API Integration for Ask AquaStay Q&A
+        document.getElementById('askAquaStayBtn').addEventListener('click', async () => {
+            const questionInput = document.getElementById('questionInput');
+            const answerOutput = document.getElementById('answerOutput');
+            const askSpinner = document.getElementById('askSpinner');
+            const userQuestion = questionInput.value.trim();
+
+            if (!userQuestion) {
+                answerOutput.innerHTML = '<p class="text-red-600">Please enter a question.</p>';
+                return;
+            }
+
+            answerOutput.innerHTML = '<p class="text-gray-600">Thinking...</p>';
+            askSpinner.style.display = 'inline-block';
+
+            const context = `AquaStay is a gastro-retentive, floating electrolyte-support tablet. It delays dehydration symptoms and maintains electrolyte homeostasis in heat-stress situations, especially for laborers, outdoor workers, and emergency personnel in hot climates like Pakistan, who may face limited water access. It uses natural polymers like Psyllium husk and Xanthan gum. It's a preventive, supportive electrolyte stabilizer, NOT a replacement for ORS or drinking water. It has a bilayer design for immediate and sustained release, and includes zinc and vitamin C for enhanced resilience. It aims for prolonged gastric retention (8-12+ hours).`;
+            const prompt = `Based on the following context about AquaStay, answer the user's question. If the question is outside the scope of AquaStay or general electrolyte knowledge, state that you cannot answer.
+
+            Context: ${context}
+
+            User Question: ${userQuestion}`;
+
+            let chatHistory = [];
+            chatHistory.push({ role: "user", parts: [{ text: prompt }] });
+            const payload = { contents: chatHistory };
+            const apiKey = ""; // Leave as-is for Canvas runtime
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                const result = await response.json();
+                if (result.candidates && result.candidates.length > 0 &&
+                    result.candidates[0].content && result.candidates[0].content.parts &&
+                    result.candidates[0].content.parts.length > 0) {
+                    const text = result.candidates[0].content.parts[0].text;
+                    answerOutput.innerHTML = `<p>${text}</p>`;
+                } else {
+                    answerOutput.innerHTML = '<p class="text-red-600">Could not get an answer. Please try again or rephrase your question.</p>';
+                }
+            } catch (error) {
+                console.error('Error asking AquaStay:', error);
+                answerOutput.innerHTML = '<p class="text-red-600">Error processing your request. Please check console.</p>';
+            } finally {
+                askSpinner.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
